@@ -26,13 +26,19 @@ class Program
         Console.WriteLine("Choisissez un nombre de wagons.");
         int nbWagons = Convert.ToInt32(Console.ReadLine()); ;
         int nbChest = 3;
+        //first, initiate random class in a var
+        Random coins = new Random();
+        int chestLoot = 0; 
         for(int i = 1; i <= nbWagons; i++)
         {
             for(int j = 1; j<= nbChest; j++)
             {
+                
                 Console.WriteLine($"Wagon {i} - Coffre {j} inspecté");
+                //then use it with .Next([min, max[)
+                chestLoot += coins.Next(0, 4);
             }
         }
-        Console.WriteLine($"Total : {nbWagons * nbChest} coffres inspectés.");
+        Console.WriteLine($"Total : {nbWagons * nbChest} coffres inspectés.\nTu as trouvé {chestLoot} pièce(s).");
     }
 }
