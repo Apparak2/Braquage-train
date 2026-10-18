@@ -23,7 +23,8 @@ class Program
             BONUS 1 : permettre à l'utilisateur de choisir le nombre de wagons
             BONUS 2 : enregistrer l'ensemble du butin trouvé et l'afficher à la fin
          */
-        int nbWagons = 4;
+        Console.WriteLine("Choisissez un nombre de wagons.");
+        int nbWagons = Convert.ToInt32(Console.ReadLine()); ;
         int nbChest = 3;
         for(int i = 1; i <= nbWagons; i++)
         {
